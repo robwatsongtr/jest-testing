@@ -5,7 +5,7 @@
   "main": "sum.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",
