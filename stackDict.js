@@ -7,13 +7,12 @@ class StackDict {
     }
 
     get peek() {
-        const item = this.items[this.top]
-        return item
+      return this.top > 0 ? this.items[this.top] : null; // Return top item or null if stack is empty
     }
   
     push(item) {
+      this.top += 1
       this.items[this.top] = item; // Store the item at the current top position
-      this.top++;                  // Increment top after pushing
     }
   
     pop() {
@@ -21,7 +20,7 @@ class StackDict {
         return null; // If stack is empty, return null
       }
   
-      this.top--;                      
+      this.top -= 1;                      
       const item = this.items[this.top]; 
       delete this.items[this.top];      
       return item;                    

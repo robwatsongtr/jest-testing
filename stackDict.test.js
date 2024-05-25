@@ -19,9 +19,12 @@ describe('My Hashmap based Stack', () => {
 
         stack.push('Watson');
         expect(stack.top).toBe(2)
-        expect(stack.peek).toBe('Rob')
+        expect(stack.peek).toBe('Watson')
     })
 
-    it.todo('can pop off the top of the stack')
+    it('can pop off the top of the stack', () => {
+        stack.push('Rob');
+        expect(stack.pop()).toBe('Rob')
+    })
 
 })
